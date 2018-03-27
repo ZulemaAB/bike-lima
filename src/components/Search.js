@@ -1,69 +1,24 @@
 import React, { Component } from 'react';
+import { Container, Header } from 'semantic-ui-react'
 import './App.css'
-import places from '../assets/places.jpg' 
 
-class Search extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: undefined,
-      searchWord: '',
-    };
-    this.onSubmit = this.onSubmit.bind(this);
-    this.onInputChange = this.onInputChange.bind(this);
-  }
+const ContainerExampleText = () => (
+  <Container text>
+    <Header as='h2'>Requisitos:</Header>
+    <p>Para ser parte de San Borja en Bici sólo tienes que ser vecino del distrito, mayor de 15 años de edad y presentar en cualquiera de las estaciones lo siguiente:</p>
+    <p> * Original y copia del Documento Nacional de Identidad (DNI)</p>
+    <p> * Un recibo de servicios (luz, agua, cable o teléfono) con menos de un (1) mes de antigüedad a la fecha de emisión.</p> 
+    <Header as='h2'>Horarios:</Header>
+    <p>Tenemos una amplia cobertura de horarios para ti, buscando satisfacer tus necesidades y rutina de labores cotidianas.</p>
+    <p>Horarios de préstamos:</p>
+    <p> * Lunes a Viernes: 7:00 am a 8:00 pm</p>
+    <p> * Sábados y Domingos: 7:00 am a 12:00 pm</p>
 
-  search() {
-    fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=-12.14536%2C-77.021919&q=${this.state.searchWord}&app_id=DemoAppId01082013GAL&app_code=AJKnXv84fjrb0KIHawS0Tg`)
-    .then(function(response) {
-      console.log(response)
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data)
-      this.setState({ data });
-    })
-    .catch(function(error) {
-      console.log('something went wrong');
-    })
-  }
+    <p>Horarios de Atención:</p>
+    <p> * Lunes a Viernes: 7:00 am a 9:00 pm</p>
+    <p> * Sábados y Domingos: 7:00 am a 1:00 pm.</p>
+  </Container>
+)
 
-onSubmit(e) {
-  e.preventDefault();
-  this.search();
-}
-
-onInputChange(e) {
-  this.setState({ searchWord: e.target.value })
-}
-
-render() {
-  const { data } = this.state;
-  return(
-    <div>
-      <div className="container">
-        <form onSubmit={this.onSubmit}>
-          <h4 className="text-center iam">Find your favorites places</h4>
-          <input className="form-control inputSearch" onChange={this.onInputChange} />
-          <button type="submit" className="btn">SEARCH</button>
-        </form>
-      </div>
-      <div className="container">
-        <div className="row">{data && data.results && data.results.items.map((item, idx) => (
-        <div key={idx} className="card col-12 col-sm-4 mt-3" id="card">
-        <img className="card-img-top" src={item.icon} alt={item.title}/>
-        <div className="card-body">
-          <h5 className="card-title">{item.title.toUpperCase()}</h5>
-          <p className="card-text">{item.vicinity}</p>
-        </div>
-      </div> 
-      ))}</div>
-      </div>
-      <img className="places-img img-fluid" src={places} alt={places}/>
-    </div>
-  )
- }
-}
-
-export default Search;
+export default ContainerExampleText
 

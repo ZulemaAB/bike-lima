@@ -6,7 +6,7 @@ import {
 } from "react-router-dom"
 import Home from "./Home"
 import Maps from "./Maps"
-import Search from "./Search"
+import Info from "./Search"
 
 class Footer extends Component {
   render() {
@@ -16,12 +16,12 @@ class Footer extends Component {
         <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/maps" component={Maps}/>
-            <Route path="/search" component={Search}/>
+            <Route path="/search" component={Info}/>
           </div>
           <ul className="header nav-footer d-flex justify-content-between">
             <li><NavLink className="text-white" to="/">Home</NavLink></li>
             <li><NavLink className="text-white" to="/maps">Maps</NavLink></li>
-            <li><NavLink className="text-white" to="/search">Places</NavLink></li>
+            <li><NavLink className="text-white" to="/search">Info</NavLink></li>
           </ul>
         </div>
       </HashRouter>
