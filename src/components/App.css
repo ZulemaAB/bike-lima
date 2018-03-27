@@ -98,3 +98,19 @@
   font-weight: 300;
   margin-top: 1rem;
 }
+
+.card-text {
+  float: right;
+  margin-top: -25px;
+}
+
+.card-title {
+  width: 80%;
+}
+
+.card-img {
+  width: 25% !important;
+  float: right;
+  margin-right: -80px;
+  margin-top: -40px;
+}

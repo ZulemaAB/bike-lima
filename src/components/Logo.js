@@ -23,9 +23,6 @@ const Logo = ({user, onAuth, onLogout}) => {
   <div>
     <nav className="navbar navbar-light fondo d-flex justify-content-center">
       <img className="logo" src={logo} alt={"logo"}/>
-      {/* <a className="navbar-brand">
-        <span className="color-maps">San Borja</span>
-      </a> */}
     </nav>
     <div className="user d-flex justify-content-end">{user ? renderUserData() : renderLoginButton()}</div>
   </div>
