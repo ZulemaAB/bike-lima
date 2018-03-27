@@ -9,11 +9,11 @@ class App extends Component {
     super(props)
     this.state = {
       user:null,
-      estaciones : {
-        estacion_1 : {
-          bicicletas:10
-        }
-      }
+      // estaciones : {
+      //   estacion_1 : {
+      //     bicicletas:10
+      //   }
+      // }
     }
     
     this.handleAuth = this.handleAuth.bind(this)

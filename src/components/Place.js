@@ -8,6 +8,10 @@ class Place extends Component {
         estacion_1 : {
           nombre:'Estación Aviación',
           bicicletas:10
+        },
+        estacion_2 :{
+          nombre:'Estación Angamos',
+          bicicletas:8
         }
       }
     }
@@ -20,9 +24,14 @@ class Place extends Component {
         estacion_1:{
           nombre:'Estación Aviación',
           bicicletas:this.state.estaciones.estacion_1.bicicletas-1
+        },
+        estacion_2:{
+          nombre:'Estación Angamos',
+          bicicletas:8
         }
       }
     })
+    console.log(this.state)
   }
   
 
