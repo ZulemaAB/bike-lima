@@ -2,12 +2,18 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import Logo from './Logo'
 import Footer from './Footer'
+// import Login from './login'
 
 class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      user:null
+      user:null,
+      estaciones : {
+        estacion_1 : {
+          bicicletas:10
+        }
+      }
     }
     
     this.handleAuth = this.handleAuth.bind(this)
@@ -27,8 +33,13 @@ class App extends Component {
   handleAuth () {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
-      .then(result => console.log(`${result.user.email} ha iniciado sesión`))
-      .catch(error => console.log(`Error: ${error.code}: ${error.message}`));
+      .then(result => {console.log(`${result.user.email} ha iniciado sesión`)
+             const dbRef = firebase.database().ref('usuarios');
+              const newPicture = dbRef.push();
+               newPicture.set(result.user.displayName);
+
+            })
+      .catch(error => console.log(`Error: ${error.code}: ${error.message}`))
   }
 
   handleLogout () {
