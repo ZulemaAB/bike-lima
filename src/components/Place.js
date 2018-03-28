@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Place.css'
 
 class Place extends Component {
   constructor (props) {
@@ -746,11 +747,22 @@ class Place extends Component {
  
     return (
       <div className="container">
+        <div>
+          <h4 className="title">ESTACIONES</h4>
+          <hr/>
+          <div>
+            <span className="span-title">Horario de Préstamo</span>
+            <img className="img-title" src="https://png.icons8.com/ios/1600/bicycle.png"/>
+            <p className="info">Lun - Vie <img width="15px" src="https://thumb.ibb.co/dYmXfS/flecha.png"/> 7am-8pm</p>
+            <p className="info">Sab - Dom  <img width="15px" src="https://thumb.ibb.co/dYmXfS/flecha.png"/> 7am-12pm</p>
+          </div>
+
+        </div> 
         <div className="card col-sm-4 mt-3" id="card">
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_1.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_1.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_1.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_1.id} disabled={this.state.estaciones.estacion_1.disabled} className="card-button" onClick={this.reservar1}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_1.disabledDevol} className="card-button" onClick={this.devolver1}>Devolver</button>
         </div>
@@ -759,7 +771,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_2.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_2.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_2.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_2.id} disabled={this.state.estaciones.estacion_2.disabled} className="card-button" onClick={this.reservar2}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_2.disabledDevol} className="card-button" onClick={this.devolver2} >Devolver</button>
         </div>
@@ -768,7 +780,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_3.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_3.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_3.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_3.id} disabled={this.state.estaciones.estacion_3.disabled} className="card-button" onClick={this.reservar3}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_3.disabledDevol} className="card-button" onClick={this.devolver3} >Devolver</button>
         </div>
@@ -777,7 +789,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_4.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_4.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_4.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_4.id} disabled={this.state.estaciones.estacion_4.disabled} className="card-button" onClick={this.reservar4}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_4.disabledDevol} className="card-button" onClick={this.devolver4} >Devolver</button>
         </div>
@@ -786,7 +798,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_5.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_5.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_5.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_5.id} disabled={this.state.estaciones.estacion_5.disabled} className="card-button" onClick={this.reservar5}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_5.disabledDevol} className="card-button" onClick={this.devolver5} >Devolver</button>
         </div>
@@ -795,7 +807,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_6.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_6.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_6.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_6.id} disabled={this.state.estaciones.estacion_6.disabled} className="card-button" onClick={this.reservar6}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_6.disabledDevol} className="card-button" onClick={this.devolver6} >Devolver</button>
         </div>
@@ -804,7 +816,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_7.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_7.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_7.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_7.id} disabled={this.state.estaciones.estacion_7.disabled} className="card-button" onClick={this.reservar7}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_7.disabledDevol} className="card-button" onClick={this.devolver7} >Devolver</button>
         </div>
@@ -813,7 +825,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_8.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_8.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_8.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_8.id} disabled={this.state.estaciones.estacion_8.disabled} className="card-button" onClick={this.reservar8}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_8.disabledDevol} className="card-button" onClick={this.devolver8} >Devolver</button>
         </div>
@@ -822,7 +834,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_9.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_9.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_9.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_9.id} disabled={this.state.estaciones.estacion_9.disabled} className="card-button" onClick={this.reservar9}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_9.disabledDevol} className="card-button" onClick={this.devolver9} >Devolver</button>
         </div>
@@ -831,7 +843,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_10.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_10.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_10.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_10.id} disabled={this.state.estaciones.estacion_10.disabled} className="card-button" onClick={this.reservar10}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_10.disabledDevol} className="card-button" onClick={this.devolver10} >Devolver</button>
         </div>
@@ -840,7 +852,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_11.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_11.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_11.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_11.id} disabled={this.state.estaciones.estacion_11.disabled} className="card-button" onClick={this.reservar11}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_11.disabledDevol} className="card-button" onClick={this.devolver11} >Devolver</button>
         </div>
@@ -849,7 +861,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_12.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_12.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_12.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_12.id} disabled={this.state.estaciones.estacion_12.disabled} className="card-button" onClick={this.reservar12}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_12.disabledDevol} className="card-button" onClick={this.devolver12} >Devolver</button>
         </div>
@@ -858,7 +870,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_13.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_13.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_13.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_13.id} disabled={this.state.estaciones.estacion_13.disabled} className="card-button" onClick={this.reservar13}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_13.disabledDevol} className="card-button" onClick={this.devolver14} >Devolver</button>
         </div>
@@ -867,7 +879,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_14.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_14.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_14.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_14.id} disabled={this.state.estaciones.estacion_14.disabled} className="card-button" onClick={this.reservar14}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_14.disabledDevol} className="card-button" onClick={this.devolver15} >Devolver</button>
         </div>
@@ -876,7 +888,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_15.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_15.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_15.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_15.id} disabled={this.state.estaciones.estacion_15.disabled} className="card-button" onClick={this.reservar15}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_15.disabledDevol} className="card-button" onClick={this.devolver16} >Devolver</button>
         </div>
@@ -885,7 +897,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_16.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_16.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_16.bicicletas} disponibles </strong></p>
           <button data-key = {this.state.estaciones.estacion_16.id} disabled={this.state.estaciones.estacion_16.disabled} className="card-button" onClick={this.reservar16}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_16.disabledDevol} className="card-button" onClick={this.devolver16} >Devolver</button>
         </div>
@@ -894,7 +906,7 @@ class Place extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.state.estaciones.estacion_17.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
-          <p className="card-text"><strong>{this.state.estaciones.estacion_17.bicicletas}</strong></p>
+          <p className="card-text"><strong>{this.state.estaciones.estacion_17.bicicletas} disponibles</strong></p>
           <button data-key = {this.state.estaciones.estacion_17.id} disabled={this.state.estaciones.estacion_17.disabled} className="card-button" onClick={this.reservar17}>Solicitar</button>
           <button disabled={this.state.estaciones.estacion_17.disabledDevol} className="card-button" onClick={this.devolver17} >Devolver</button>
         </div>
