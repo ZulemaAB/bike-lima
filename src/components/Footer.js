@@ -19,9 +19,9 @@ class Footer extends Component {
             <Route path="/search" component={Info}/>
           </div>
           <ul className="header nav-footer d-flex justify-content-between">
-            <li><NavLink className="text-white" to="/">Home</NavLink></li>
-            <li><NavLink className="text-white" to="/maps">Maps</NavLink></li>
-            <li><NavLink className="text-white" to="/search">Info</NavLink></li>
+            <li><img className="img-li" width="30px" src="https://png.icons8.com/ios/1600/bicycle.png"/><NavLink className="text-white" to="/">Estaciones</NavLink></li>
+            <li><img className="img-li" width="30px" src="https://thumb.ibb.co/eQsEc7/geo.png"/><NavLink className="text-white" to="/maps">Mapas</NavLink></li>
+            <li><img className="img-li" width="30px" src="https://thumb.ibb.co/i4huAS/info.png"/><NavLink className="text-white" to="/search">Info</NavLink></li>
           </ul>
         </div>
       </HashRouter>
