@@ -19,8 +19,8 @@ class Footer extends Component {
             <Route path="/search" component={Info}/>
           </div>
           <ul className="header nav-footer d-flex justify-content-between">
-            <li><NavLink className="text-white" to="/">Home</NavLink></li>
-            <li><NavLink className="text-white" to="/maps">Maps</NavLink></li>
+            <li><NavLink className="text-white" to="/">Estaciones</NavLink></li>
+            <li><NavLink className="text-white" to="/maps">Mapas</NavLink></li>
             <li><NavLink className="text-white" to="/search">Info</NavLink></li>
           </ul>
         </div>

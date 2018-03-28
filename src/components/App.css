@@ -56,7 +56,7 @@ nav {
   position: fixed;
   bottom: 0;
   color: #ffffff !important;
-  background-color: rgb(69, 197, 40);
+  background-color: #2EB3E7;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -115,18 +115,22 @@ nav {
 }
 
 .card-title {
-  width: 80%;
+  width: 70%;
 }
 
 .card-img {
   width: 25% !important;
   float: right;
-  margin-right: -80px;
+  margin-right: -50px;
   margin-top: -40px;
 }
 
 .card-button {
   margin: 10px;
+  background:  #2EB3E7;
+  border: none;
+  padding: 10px 60px;
+  color: white;
 }
 
 .card-ult {
