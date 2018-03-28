@@ -6,9 +6,11 @@ class Place extends Component {
     this.state = {
       estaciones : {
         estacion_1 : {
-          id:1,
+          id:'estacion_1',
           nombre:'Estacion Angamos (cruce Av. Angamos con Jr. Emilio Harth)',
-          bicicletas:15
+          bicicletas:15,
+          disabled:'',
+          open:false
         },
         estacion_2 :{
           id:2,
@@ -91,34 +93,33 @@ class Place extends Component {
     }
   }
 
-  reservar(){
-    // event.preventDefault()
-    // this.setState({
-    //   estaciones:{
-    //     estacion_1:{
-    //       nombre:'Estación Aviación',
-    //       bicicletas:this.state.estaciones.estacion_1.bicicletas-1
-    //     },
-    //     estacion_2:{
-    //       nombre:'Estación Angamos',
-    //       bicicletas:8
-    //     }
-    //   }
-    // })
-    console.log('hahah')
+  reservar =(event) =>{
+    const id = event.target.dataset.key
+    this.setState({
+      ... this.state,
+      estaciones:{
+        ... this.state.estaciones,
+        estacion_1:{
+          ... this.state.estaciones.estacion_1,
+          bicicletas:this.state.estaciones.estacion_1.bicicletas-1,
+          disabled:'disabled'
+        }
+      }
+    })
+    console.log(event.target.dataset.key)
+    alert(`Solicito una bicicleta de la ${this.state.estaciones.estacion_1.nombre}`);
   }
 
-
   render() {
-    const list = this.props.data.map((el)=> 
-      <div key={el.id} className="card col-sm-4 mt-3" id="card">
-        <div className="card-body">
-          <h5 className="card-title">{el.nombre}
-          <img className="card-img size" src={el.imagen} alt={el.nombre}/></h5>
-          <p className="card-text"><strong>{el.bicicletas}</strong></p>
-        </div>
-      </div> 
-    )
+    // const list = this.props.data.map((el)=> 
+    //   <div key={el.id} className="card col-sm-4 mt-3" id="card">
+    //     <div className="card-body">
+    //       <h5 className="card-title">{el.nombre}
+    //       <img className="card-img size" src={el.imagen} alt={el.nombre}/></h5>
+    //       <p className="card-text"><strong>{el.bicicletas}</strong></p>
+    //     </div>
+    //   </div> 
+    // )
 
     return (
       <div className="container">
@@ -128,7 +129,7 @@ class Place extends Component {
           <h5 className="card-title">{this.state.estaciones.estacion_1.nombre}
           <img className="card-img size" src="https://png.icons8.com/ios/1600/bicycle.png"/></h5>
           <p className="card-text"><strong>{this.state.estaciones.estacion_1.bicicletas}</strong></p>
-          <button className="card-button" onClick={this.reservar.bind(this)}>Solicitar</button>
+          <button data-key = {this.state.estaciones.estacion_1.id} disabled={this.state.estaciones.estacion_1.disabled} className="card-button" onClick={this.reservar}>Solicitar</button>
           <button className="card-button">Devolver</button>
         </div>
       </div> 
