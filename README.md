@@ -8,7 +8,7 @@ El programa de prestamos de bicicletas del distrito de San Borja, permite a sus 
 ##  Equipo de trabajo:
 
 + Llerena ,Dayan
-+  Japa Ozcate Helena
++ Japa, Elena
 + Mamani Flores,Gabriela
 + Chavez Loli, Isabel
 + Asto Berrocal, Zulema
@@ -78,13 +78,7 @@ La  falta de interactividad de la plataforma actual  con sus  usuarios y la red 
 
 Se difinició un user persona principal.
 
-
-
-
-
-
-
-
+![user](src/assets/testing/user.png)
 
 ### C. Prototipado
 
@@ -94,6 +88,7 @@ Se difinició un user persona principal.
 
 - Realización del content prototype del flujo del MVP. Se intentó replicar la interacción del usuario con la plataforma  y como se daría el seguimiento a su ruta.
 
+![user](src/assets/testing/content.png)
 
 
 **Testing con el cliente**
