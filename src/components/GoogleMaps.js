@@ -22,14 +22,14 @@ class GoogleMaps extends React.Component {
 	}
 
 	// sólo se ejecuta antes de que el componente sea montado
-	// componentWillMount() {
-	// 	if (!window.google) {
-	// 		loadMaps(() => {
-	// 			this.forceUpdate();
-	// 			console.log ('_mapsLoaded', window.google);
-	// 		})
-	// 	}
-	// }
+	componentWillMount() {
+		if (!window.google) {
+			loadMaps(() => {
+				this.forceUpdate();
+				console.log ('_mapsLoaded', window.google);
+			})
+		}
+	}
 
 	// se ejecuta cuando el componente ya cargó
 	componentDidMount() {
@@ -38,7 +38,7 @@ class GoogleMaps extends React.Component {
 
 		this.map = new window.google.maps.Map(this.refs.map, {
 			zoom: 15,
-			// mapTypeControl: false
+			mapTypeControl: false
 		});
 
 		this.directionsService = new window.google.maps.DirectionsService;

@@ -5,7 +5,7 @@ import {
   HashRouter
 } from "react-router-dom"
 import Home from "./Home"
-import Map from "./Map"
+import FinalMap from "./FinalMap"
 import Info from "./Search"
 
 class Footer extends Component {
@@ -15,7 +15,7 @@ class Footer extends Component {
         <div>
         <div className="content">
             <Route exact path="/" component={Home}/>
-            <Route path="/map" component={Map}/>
+            <Route path="/map" component={FinalMap}/>
             <Route path="/search" component={Info}/>
           </div>
           <ul className="header nav-footer d-flex justify-content-between">
